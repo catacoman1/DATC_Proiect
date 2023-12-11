@@ -23,5 +23,14 @@ public class UserController {
         return ResponseEntity.ok(savedUser);
     }
 
+    @GetMapping("/users/{id}")
+    public ResponseEntity<Users> getUserById(@PathVariable String id) {
+        Users user = userService.getUserById(id);
+        if (user == null) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(user);
+    }
+
 
 }
