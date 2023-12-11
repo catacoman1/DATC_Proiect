@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:sqlserver://citydangerserver.database.windows.net:1433;database=CityDangerDB;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
+    username: superadmin
+    password: Caransebes325400
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    dialect: org.hibernate.dialect.SQLServer2012Dialect
+server:
+  port: 9090
