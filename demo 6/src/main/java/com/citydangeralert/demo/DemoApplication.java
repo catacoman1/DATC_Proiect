@@ -32,9 +32,9 @@ public class DemoApplication implements CommandLineRunner {
 		jmsTemplate.convertAndSend(QUEUE_NAME, "Hello World");
 	}
 
-	@JmsListener(destination = QUEUE_NAME, containerFactory = "jmsListenerContainerFactory")
-	public void receiveMessage(String message) {
-		LOGGER.info("Message received: {}", message);
-	}
+//	@JmsListener(destination = QUEUE_NAME, containerFactory = "jmsListenerContainerFactory")
+//	public void receiveMessage(String message) {
+//		LOGGER.info("Message received: {}", message + "procesat");
+//	}
 
 }
