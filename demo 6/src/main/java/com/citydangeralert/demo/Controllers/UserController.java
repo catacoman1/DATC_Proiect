@@ -41,6 +41,12 @@ public class UserController {
         List<Users>users = userService.getAllUsers();
         return new ResponseEntity<>(users, HttpStatus.OK);
     }
+    @GetMapping("/{id}/points")
+    public ResponseEntity<Integer> getUserPoints(@PathVariable("id") Long userId) {
+        return userService.getUserPoints(userId)
+                .map(ResponseEntity::ok)
+                .orElseGet(() -> ResponseEntity.notFound().build());
+    }
 
 
 

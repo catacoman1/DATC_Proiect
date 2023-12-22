@@ -36,5 +36,8 @@ public class UserService {
         return usersRepository.findAll();
     }
 
+    public Optional<Integer> getUserPoints(Long userId) {
+        return usersRepository.findById(String.valueOf(userId)).map(Users::getPoints);
+    }
 
 }
