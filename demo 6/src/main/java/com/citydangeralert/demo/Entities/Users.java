@@ -27,6 +27,7 @@ public class Users {
     private String password;
     private String role;
     private Integer points;
+    private Integer OrderIndex=0;
 
 
 }
