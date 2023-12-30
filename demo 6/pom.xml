@@ -33,6 +33,12 @@
 			<type>pom</type>
 			<scope>import</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-websocket -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-websocket</artifactId>
+			<version>6.1.2</version>
+		</dependency>
 
 		<dependency>
 			<groupId>com.azure.spring</groupId>
@@ -91,6 +97,12 @@
 			<groupId>com.microsoft.azure</groupId>
 			<artifactId>azure-servicebus</artifactId>
 			<version>1.2.15</version>
+		</dependency>
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>RELEASE</version>
+			<scope>compile</scope>
 		</dependency>
 	</dependencies>
 
