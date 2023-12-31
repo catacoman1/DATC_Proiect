@@ -43,4 +43,15 @@ public class TaskController {
         List<Task>tasks = taskService.getAllTasks();
         return new ResponseEntity<>(tasks, HttpStatus.OK);
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> deleteTaskById(@PathVariable String id) {
+        try {
+            taskService.deleteTaskById(id);
+            return new ResponseEntity<>(HttpStatus.OK);
+        } catch (Exception e) {
+            // Handle the case where the task cannot be found or another error occurs
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
 }
