@@ -34,4 +34,8 @@ public class TaskService {
     public List<Task> getAllTasks() {
         return taskRepository.findAll();
     }
+
+    public void deleteTaskById(String id) {
+        taskRepository.deleteById(id);
+    }
 }
