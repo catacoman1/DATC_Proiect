@@ -50,7 +50,7 @@ public class TaskController {
             taskService.deleteTaskById(id);
             return new ResponseEntity<>(HttpStatus.OK);
         } catch (Exception e) {
-            // Handle the case where the task cannot be found or another error occurs
+
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
