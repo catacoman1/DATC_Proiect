@@ -7,7 +7,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.jms.annotation.EnableJms;
-import org.springframework.jms.annotation.JmsListener;
+
 import org.springframework.jms.core.JmsTemplate;
 
 @SpringBootApplication
@@ -28,8 +28,8 @@ public class DemoApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) {
-		LOGGER.info("Sending message");
-		jmsTemplate.convertAndSend(QUEUE_NAME, "Hello World");
+//		LOGGER.info("Sending message");
+//		jmsTemplate.convertAndSend(QUEUE_NAME, "Hello World");
 	}
 
 //	@JmsListener(destination = QUEUE_NAME, containerFactory = "jmsListenerContainerFactory")

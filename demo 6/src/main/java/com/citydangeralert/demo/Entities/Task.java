@@ -6,7 +6,6 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Generated;
 import lombok.NoArgsConstructor;
 
 @Entity
@@ -21,4 +20,7 @@ public class Task {
     private int id;
     private String name;
     private long points;
+    private double latitude;
+    private double longitude;
+
 }

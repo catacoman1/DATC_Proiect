@@ -28,6 +28,8 @@ public class Users {
     private String role;
     private Integer points;
     private Integer OrderIndex=0;
+    private double latitudine;
+    private double longitudine;
 
 
 }
