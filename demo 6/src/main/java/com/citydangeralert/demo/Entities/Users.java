@@ -39,10 +39,10 @@ public class Users implements UserDetails {
     private Integer points;
 
     private Integer OrderIndex=0;
-    private double latitudine;
-    private double longitudine;
 
+    private Double latitudine;
 
+    private Double longitudine;
 
 
     @Override

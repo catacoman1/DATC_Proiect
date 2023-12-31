@@ -18,9 +18,13 @@ public class Task {
     @Id
     @GeneratedValue
     private int id;
+
     private String name;
+
     private long points;
-    private double latitude;
-    private double longitude;
+
+    private Double latitude;
+
+    private Double longitude;
 
 }
