@@ -17,5 +17,6 @@ public class NotificationController {
     @SendTo("/topic/tasks")
     public Task send(final Task message) throws Exception {
         return message;
+
     }
 }

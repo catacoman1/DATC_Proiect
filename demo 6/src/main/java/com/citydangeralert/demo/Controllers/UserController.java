@@ -47,7 +47,20 @@ public class UserController {
                 .map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
-
+    @PostMapping("/{id}/addPoints")
+    public ResponseEntity<Users> addPointsToUser(@PathVariable Long id, @RequestBody int points) {
+        Users updatedUser = userService.updateUserPoints(id, points);
+        if (updatedUser == null) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(updatedUser);
+    }
+    @GetMapping("/email/{email}")
+    public ResponseEntity<Users> getUserByEmail(@PathVariable String email) {
+        return userService.getUserByEmail(email)
+                .map(ResponseEntity::ok)
+                .orElseGet(() -> ResponseEntity.notFound().build());
+    }
 
 
 }
