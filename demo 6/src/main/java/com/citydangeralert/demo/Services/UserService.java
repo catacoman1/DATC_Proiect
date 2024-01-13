@@ -39,5 +39,19 @@ public class UserService {
     public Optional<Integer> getUserPoints(Long userId) {
         return usersRepository.findById(String.valueOf(userId)).map(Users::getPoints);
     }
+    public Users updateUserPoints(Long id, int pointsToAdd) {
+        Optional<Users> user = usersRepository.findById(String.valueOf(id));
+        if (user.isPresent()) {
+            Users updatedUser = user.get();
+            updatedUser.setPoints(updatedUser.getPoints() + pointsToAdd); // Assuming you have a field 'points' in your Users entity
+            return usersRepository.save(updatedUser);
+        } else {
+            return null;
+        }
+    }
+    public Optional<Users> getUserByEmail(String email) {
+        // Assuming you have a method in your repository to find a user by email
+        return usersRepository.findByEmail(email);
+    }
 
 }

@@ -9,4 +9,4 @@ spring:
       ddl-auto: update
     dialect: org.hibernate.dialect.SQLServer2012Dialect
 server:
-  port: 9090
+  port: 8080
