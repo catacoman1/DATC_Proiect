@@ -14,6 +14,8 @@
 	<name>demo</name>
 	<description>citydangeralert application</description>
 	<properties>
+		<jib-maven-plugin.version>3.4.0</jib-maven-plugin.version>
+		<docker.image.prefix>datcproiectdocker.azurecr.io</docker.image.prefix>
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
@@ -136,6 +138,19 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>jib-maven-plugin</artifactId>
+				<groupId>com.google.cloud.tools</groupId>
+				<version>${jib-maven-plugin.version}</version>
+				<configuration>
+					<from>
+						<image>mcr.microsoft.com/java/jre:17-zulu-alpine</image>
+					</from>
+					<to>
+						<image>${docker.image.prefix}/${project.artifactId}</image>
+					</to>
 				</configuration>
 			</plugin>
 		</plugins>
